@@ -210,6 +210,7 @@ function Hero(props) {
         <div style={{ borderRadius: 12, overflow: "hidden", aspectRatio: "16/9", width: "100%", maxWidth: 800, boxShadow: "0 20px 60px rgba(0,0,0,0.35)", marginBottom: 32 }}>
           <video
             controls
+            poster="thumbnail.jpg"
             style={{ width: "100%", height: "100%", display: "block", background: "#000" }}
           >
             <source src="video.mp4" type="video/mp4" />
