@@ -208,15 +208,12 @@ function Hero(props) {
         <h1 style={{ fontSize: "clamp(36px,5vw,56px)", fontWeight: 700, color: "#fff", lineHeight: 1.1, margin: "0 0 16px", letterSpacing: "-0.03em" }}>{s.title}</h1>
         <p style={{ fontSize: "clamp(18px,2.5vw,22px)", color: "rgba(255,255,255,0.85)", margin: "0 0 32px", fontWeight: 500, maxWidth: 560, lineHeight: 1.6 }}>{s.desc}</p>
         <div style={{ borderRadius: 12, overflow: "hidden", aspectRatio: "16/9", width: "100%", maxWidth: 800, boxShadow: "0 20px 60px rgba(0,0,0,0.35)", marginBottom: 32 }}>
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/iVrT27_LqxE"
-            title="Lactulose Atemgastest"
-            style={{ border: "none", display: "block" }}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+          <video
+            controls
+            style={{ width: "100%", height: "100%", display: "block", background: "#000" }}
+          >
+            <source src="video.mp4" type="video/mp4" />
+          </video>
         </div>
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center", marginTop: 32 }}>
           <button onClick={onScrollToGuide}
