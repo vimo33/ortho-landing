@@ -18,8 +18,9 @@ export function setupPageMotion() {
   const mm = gsap.matchMedia();
   mm.add("(prefers-reduced-motion: no-preference)", () => {
     gsap.timeline({ delay: 0.1 })
-      .from(".hero h1, .hero-set, .hero-lead, .hero-cta > *", { y: 18, autoAlpha: 0, duration: 0.7, stagger: 0.08 })
-      .from(".hero video", { y: 24, scale: 0.97, autoAlpha: 0, duration: 0.9 }, 0.15)
+      .from(".hero-set, .hero h1, .hero-lead", { y: 18, autoAlpha: 0, duration: 0.7, stagger: 0.08 })
+      .from(".hero video", { y: 24, scale: 0.97, autoAlpha: 0, duration: 0.9 }, 0.2)
+      .from(".hero-cta > *", { y: 14, autoAlpha: 0, duration: 0.6, stagger: 0.08 }, 0.45)
       .from(".hero-scroll", { autoAlpha: 0, duration: 0.6 }, 0.9);
 
     const reveal = (selector: string, stagger = 0.07) => {

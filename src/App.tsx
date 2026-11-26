@@ -145,16 +145,14 @@ export default function App() {
 
       <header className="hero">
         <div className="hero-in wrap">
-          <div>
-            <h1>{c.title}</h1>
-            <p className="hero-set">{c.set}</p>
-            <p className="hero-lead">{c.lead}</p>
-            <div className="hero-cta">
-              <a className="btn btn-light" href={`#${c.prep.id}`} onClick={() => setOpenId(c.prep.id)}><ListChecks size={18} aria-hidden="true" /> {c.startCta}</a>
-              <a className="hero-pdf" href={asset("anleitung-testset-604.pdf")} target="_blank" rel="noreferrer"><FileDown size={18} aria-hidden="true" /> {c.pdfCta}</a>
-            </div>
-          </div>
+          <p className="hero-set">{c.set}</p>
+          <h1>{c.title}</h1>
+          <p className="hero-lead">{c.lead}</p>
           <video src={asset("video.mp4")} poster={asset("thumbnail.jpg")} controls playsInline preload="none" aria-label={c.videoLabel} width={1920} height={1080} />
+          <div className="hero-cta">
+            <a className="btn btn-light" href={`#${c.prep.id}`} onClick={() => setOpenId(c.prep.id)}><ListChecks size={18} aria-hidden="true" /> {c.startCta}</a>
+            <a className="hero-pdf" href={asset("anleitung-testset-604.pdf")} target="_blank" rel="noreferrer"><FileDown size={18} aria-hidden="true" /> {c.pdfCta}</a>
+          </div>
         </div>
         <a className="hero-scroll" href="#inhalt" aria-label={c.scrollHint}><ChevronDown size={28} strokeWidth={1.75} aria-hidden="true" /></a>
       </header>
